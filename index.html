@@ -16,6 +16,16 @@
 
     <!-- https://vuejs.org/v2/guide/index.html -->
     <div id="app">
+      <h1>{{d.collection.title}}</h1>
+        <div>
+          <ul v-for="todo in d.collection.items">
+            <li><a v-bind:href="todo.href" target="_blanck">Enlace Movie</a></li>
+            <li v-for="peli in todo.data"><b>{{peli.prompt}}</b>: <i>{{peli.value}}</i></li>
+          </ul>
+        </div>
+
+
+
       <!--
            TODO Show collection data. See js/script.js
            - Show collection Title

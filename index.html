@@ -17,10 +17,10 @@
     <!-- https://vuejs.org/v2/guide/index.html -->
     <div id="app">
       <h1>{{d.collection.title}}</h1>
-        <div>
-          <ul v-for="todo in d.collection.items">
-            <li><a v-bind:href="todo.href" target="_blanck">Enlace Movie</a></li>
-            <li v-for="peli in todo.data"><b>{{peli.prompt}}</b>: <i>{{peli.value}}</i></li>
+        <div v-for="item in d.collection.items">
+          <ul>
+            <li><a v-bind:href="item.href" target="_blanck">Enlace Movie</a></li>
+            <li v-for="name in item.data"><b>{{name.prompt}}</b>: <i>{{name.value}}</i></li>
           </ul>
         </div>
 

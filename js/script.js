@@ -47,5 +47,11 @@ var app = new Vue({
   el: '#app',
   data: {
     d: server_data
+  },
+  computed: {
+    TituloPelicula: function() 
+    {
+      for
+    }
   }
 });

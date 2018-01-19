@@ -21,6 +21,7 @@
               <img class="card-img-top" v-bind:src="DamePropiedad(item, 'image')" alt="PictureMovie"/>
             <div class="card-body">
                 <h5 class="card-title">{{DamePropiedad(item, 'name')}}</h5>
+                <button class="btn btn-success btn-block" v-on:click="ButtonClick">Show</button>
                 <ul>
                   <li  v-for="elemento in item.data" v-if="elemento.name !='name' &&  elemento.name != 'image'">
                     <b>{{elemento.prompt}}</b>: 

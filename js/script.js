@@ -60,9 +60,22 @@ var app = new Vue({
           resultado = item.data[i].value;
         }        
       }
-      //var Filtrado = item.data.filter(function(e){return e.name == campo})[0]; Version Funcional
+      //var Filtrado = item.data.filter(function(e){return e.name == propiedad})[0]; Version Funcional
       //return Filtrado ? Filtrado.value: '';
       return resultado;
+    },
+    ButtonClick: function(event)
+    {
+      var boton = event.target;
+
+      if (boton.innerText == "Show") 
+      {
+        boton.innerText = 'Hide';
+      } 
+      else 
+      {
+        boton.innerText = 'Show';
+      }
     }
   }
 });

@@ -18,9 +18,9 @@
       <h1>{{d.collection.title}}</h1>
         <div class="row">
           <div class="card col-md-4" v-for="item in d.collection.items">
-              <img class="card-img-top" v-for="elemento in item.data" v-if="elemento.name == 'image'" v-bind:src="elemento.value" alt="PictureMovie"/>
+              <img class="card-img-top" v-bind:src="DamePropiedad(item, 'image')" alt="PictureMovie"/>
             <div class="card-body">
-                <h5 class="card-title">{{TituloPelicula}}</h5>
+                <h5 class="card-title">{{DamePropiedad(item, 'name')}}</h5>
                 <ul>
                   <li  v-for="elemento in item.data" v-if="elemento.name !='name' &&  elemento.name != 'image'">
                     <b>{{elemento.prompt}}</b>: 
@@ -31,16 +31,16 @@
             </div>
           </div>
         </div>
-      <!--
-        TODO Show collection data. See js/script.js
-          - Show collection Title
-          - For each item (https://vuejs.org/v2/guide/index.html#Conditionals-and-Loops)
-          - Display a link for the item "href" property
-          - Display the item data. For each data element:
-            - Display its "prompt" property in bold style
-            - Display its "value" property in italic style
-      -->
     </div>
     <script src="js/script.js"></script>
   </body>
 </html>
+      <!--
+              TODO Show collection data. See js/script.js
+                - Show collection Title
+                - For each item (https://vuejs.org/v2/guide/index.html#Conditionals-and-Loops)
+                - Display a link for the item "href" property
+                - Display the item data. For each data element:
+                  - Display its "prompt" property in bold style
+                  - Display its "value" property in italic style
+            -->

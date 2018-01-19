@@ -48,10 +48,21 @@ var app = new Vue({
   data: {
     d: server_data
   },
-  computed: {
-    TituloPelicula: function() 
+  methods: 
+  {
+    DamePropiedad: function (item, propiedad) 
     {
-      for
+      var resultado;
+      for (i = 0; i < item.data.length; i++) 
+      {
+        if (item.data[i].name == propiedad) 
+        {
+          resultado = item.data[i].value;
+        }        
+      }
+      //var Filtrado = item.data.filter(function(e){return e.name == campo})[0]; Version Funcional
+      //return Filtrado ? Filtrado.value: '';
+      return resultado;
     }
   }
 });
